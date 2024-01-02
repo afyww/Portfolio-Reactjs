@@ -1,7 +1,7 @@
 import React from 'react';
 import Learnmorebtn from './Learnmorebtn';
-import dinkesProjectImage from './assets/images/Dinkes-Project.png';
-import portfolioImage from './assets/images/Portfolio.png';
+import dinkesProjectImage from '../assets/images/Dinkes-Project.png';
+import portfolioImage from '../assets/images/Portfolio.png';
 
 
 const ProjectCard = ({ title, imageSrc, technologies, description }) => {

@@ -2,15 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { motion } from "framer-motion";
-import Navbar from './Navbar'
-import Herosection from './Herosection'
-import Scrolldown from './Scrolldown'
-import Aboutsection from './Aboutsection';
-import Expsection from './Expsection';
-import Projectsection from './Projectsection';
-import Techstack from './Techstack';
-import Contactsection from './Contactsection';
-import Footersection from './Footersection';
+import Navbar from './components/Navbar'
+import Herosection from './components/Herosection'
+import Scrolldown from './components/Scrolldown'
+import Aboutsection from './components/Aboutsection';
+import Expsection from './components/Expsection';
+import Projectsection from './components/Projectsection';
+import Techstack from './components/Techstack';
+import Contactsection from './components/Contactsection';
+import Footersection from './components/Footersection';
 
 
 const commonMotionProps = {
