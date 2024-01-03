@@ -1,6 +1,8 @@
 import './App.css'
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 
+// eslint-disable-next-line react/prop-types
 const Learnmorebtn = ({ title, description, technologies }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 

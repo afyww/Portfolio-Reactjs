@@ -4,6 +4,7 @@ import dinkesProjectImage from '../assets/images/Dinkes-Project.png';
 import portfolioImage from '../assets/images/Portfolio.png';
 
 
+// eslint-disable-next-line react/prop-types
 const ProjectCard = ({ title, imageSrc, technologies, description }) => {
   return (
     <div className="rounded-sm space-y-3">

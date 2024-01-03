@@ -29,7 +29,7 @@ const Aboutcard = () => {
           className="flex transition-transform duration-300 ease-in-out transform"
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
-          {sections.map((section, index) => (
+          {sections.map((section) => (
             <div
               key={section}
               className="w-full flex-shrink-0"

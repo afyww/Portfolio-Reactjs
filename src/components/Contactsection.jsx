@@ -5,9 +5,9 @@ import Contactcard from './Contactcard';
 const Contactsection = () => {
     return (
         <section id="contact">
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 h-screen md:h-screen xl:h-screen 2xl:h-screen">
-                <div class="my-auto">
-                    <h1 class="text-6xl text-white font-extrabold text-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 h-screen md:h-screen xl:h-screen 2xl:h-screen">
+                <div className="my-auto">
+                    <h1 className="text-6xl text-white font-extrabold text-center">
                         <TypewriterComponent
                             options={{
                                 strings: [
@@ -20,7 +20,7 @@ const Contactsection = () => {
                         />
                     </h1>
                 </div>
-                <div class="md:my-auto xl:my-auto">
+                <div className="md:my-auto xl:my-auto">
                    <Contactcard />
                 </div>
             </div>
