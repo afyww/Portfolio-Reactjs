@@ -1,4 +1,4 @@
-import React from 'react';
+import './App.css'
 import Projectcard from './Projectcard';
 import TypewriterComponent from 'typewriter-effect';
 

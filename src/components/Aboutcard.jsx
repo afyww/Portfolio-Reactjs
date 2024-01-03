@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import './App.css'
+import { useState } from 'react';
 
 const Aboutcard = () => {
   const sections = ['skill', 'education', 'certificate'];

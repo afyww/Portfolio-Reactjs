@@ -1,3 +1,4 @@
+import './App.css'
 import React, { useState } from 'react';
 
 const Learnmorebtn = ({ title, description, technologies }) => {

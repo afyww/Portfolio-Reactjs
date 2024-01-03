@@ -1,4 +1,4 @@
-import React from 'react'
+import './App.css'
 import TypewriterComponent from 'typewriter-effect';
 import Contactcard from './Contactcard';
 

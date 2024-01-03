@@ -1,4 +1,4 @@
-import React from 'react';
+import './App.css'
 import Learnmorebtn from './Learnmorebtn';
 import dinkesProjectImage from '../assets/images/Dinkes-Project.png';
 import portfolioImage from '../assets/images/Portfolio.png';
