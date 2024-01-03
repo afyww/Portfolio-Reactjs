@@ -65,8 +65,8 @@ const Herosection = () => {
                 </div>
                 <div className="ml-0 md:ml-32 xl:ml-32 my-auto space-y-4">
              
-                    <div className="flex justify-center">
-                        <a href="https://www.linkedin.com/in/afywahyu/" className="pr-4">
+                    <div className="flex justify-center space-x-4">
+                        <a href="https://www.linkedin.com/in/afywahyu/">
                             <svg className="w-12 h-12" width="4" height="48" viewBox="0 0 48 48" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -74,7 +74,7 @@ const Herosection = () => {
                                     fill="black" />
                             </svg>
                         </a>
-                        <a href="https://www.instagram.com/aafyww/" className="pr-4">
+                        <a href="https://www.instagram.com/aafyww/">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" clipRule="evenodd"
