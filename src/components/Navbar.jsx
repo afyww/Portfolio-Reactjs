@@ -10,6 +10,7 @@ const Navbar = () => {
     };
     return (
         <section>
+            <div className='h-16'></div>
             <nav className="fixed z-50 top-0 right-20 left-20 mx-auto shadow-xl">
                 <div className="mx-auto px-4">
                     <div className="flex justify-between">
