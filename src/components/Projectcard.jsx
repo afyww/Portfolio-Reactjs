@@ -43,7 +43,7 @@ const ProjectCardList = () => {
       title: 'Cashier Web',
       imageSrc: Cashier,
       technologies: 'ReactJs-Javascript-Laravel-Tailwind',
-      description: 'Cashier web apps for coffeshop.This build with ReactJs for frontend,And Laravel for backend.',
+      description: 'Cashier web apps for coffeshop.This build with ReactJs for frontend,And Laravel rest api for backend.',
     },
     {
       title: 'Portfolio Website',
