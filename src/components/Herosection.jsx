@@ -6,9 +6,9 @@ const Herosection = () => {
         <section id="home">
             <div className="grid grid-cols-1 h-screen md:grid-cols-2 xl:grid-cols-3 2xl:grid-col-3">
                 <div className="my-0 md:my-auto xl:my-auto space-y-2">
-                    
-                        <h1 className="text-5xl xl:text-left text-center text-white font-extrabold">Hi.Im</h1>
-                        <h1 className="text-5xl xl:text-left text-center text-black font-extrabold">Afy Wahyu</h1>
+
+                    <h1 className="text-5xl xl:text-left text-center text-white font-extrabold">Hi.Im</h1>
+                    <h1 className="text-5xl xl:text-left text-center text-black font-extrabold">Afy Wahyu</h1>
 
                     <div className="my-2">
                         <h1 className="text-5xl xl:text-left text-center text-white font-bold font-['QuattrocentoSans']">
@@ -17,6 +17,7 @@ const Herosection = () => {
                                     strings: [
                                         "A Laravel Developer",
                                         "A Web Developer",
+                                        "A React Developer",
                                     ],
                                     autoStart: true,
                                     loop: true,
@@ -24,13 +25,12 @@ const Herosection = () => {
                                 }}
                             />
                         </h1>
-                       
-                            <h1 className="text-3xl xl:text-left text-center text-black font-bold font-['QuattrocentoSans']"> Based In <span
-                                className="text-red-600">Indonesia</span></h1>
+                        <h1 className="text-3xl xl:text-left text-center text-black font-bold font-['QuattrocentoSans']"> Based In <span
+                            className="text-red-600">Indonesia</span></h1>
                     </div>
                 </div>
                 <div className="order-first mx-auto xl:mx-0 md:mx-0 2xl:mx-0 md:order-first md:col-span-1 xl:col-span-1 xl:order-none my-auto">
-                    
+
                     <svg className='w-full h-full' viewBox="0 0 511 594" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_i_4_241)">
                             <path fillRule="evenodd" clipRule="evenodd" d="M187.688 349.726C231.358 369.154 280.327 366.996 318.696 349.725V392.286L319.129 392.276V417.265H187.688V349.726Z" fill="#BB7D52" />
@@ -63,7 +63,7 @@ const Herosection = () => {
                     </svg>
                 </div>
                 <div className="ml-0 md:ml-32 xl:ml-32 my-auto space-y-4">
-             
+
                     <div className="flex justify-center space-x-4">
                         <a href="https://www.linkedin.com/in/afywahyu/">
                             <svg className="w-12 h-12" width="4" height="48" viewBox="0 0 48 48" fill="none"
