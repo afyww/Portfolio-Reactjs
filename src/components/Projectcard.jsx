@@ -6,7 +6,7 @@ import Cashier from '../assets/images/Cashier.png'
 
 
 // eslint-disable-next-line react/prop-types
-const ProjectCard = ({ title, imageSrc, technologies, description }) => {
+const ProjectCard = ({ title, imageSrc, technologies, description, link }) => {
   return (
     <div className="rounded-sm space-y-3">
       <img
@@ -19,8 +19,10 @@ const ProjectCard = ({ title, imageSrc, technologies, description }) => {
       <h1 className="font-semibold text-2xl">{title}</h1>
       <p className="text-emerald-600 line-clamp-1">{technologies}</p>
       <p className="text-left font-light line-clamp-2 max-w-xs">{description}</p>
-      
+      <div className='flex justify-between'>
       <Learnmorebtn title={title} technologies={technologies} description={description} />
+      <a className='bg-red-500 hover:bg-red-700 text-black font-light py-2 px-4 rounded-sm' href={link}>Visit</a>
+      </div>
     </div>
   );
 };
@@ -32,38 +34,22 @@ const ProjectCardList = () => {
       imageSrc: dinkesProjectImage,
       technologies: 'Laravel-Tailwind-Jquery-Docker-Mysql',
       description: 'Information system website for Dinas Kesehatan Kota Semarang.Build with laravel full stack framework and tailwind for the front end.This web for manage employee and make work letter for the employee.',
+      link: 'http://119.2.50.170:5500/surat-p2p/',
     },
     {
       title: 'Portfolio Website',
       imageSrc: portfolioImage,
       technologies: 'ReactJs-Javascript-Tailwind-FramerMotion',
       description: 'Portfolio website for review my project.This website build with NextJs,Tailwind,And FramerMotion.',
+      link: 'https://portfolio-reactjs-sigma.vercel.app/',
     },
     {
       title: 'Cashier Web',
       imageSrc: Cashier,
       technologies: 'ReactJs-Javascript-Laravel-Tailwind',
       description: 'Cashier web apps for coffeshop.This build with ReactJs for frontend,And Laravel rest api for backend.',
+      link: 'https://beilcoff-client.vercel.app/',
     },
-    {
-      title: 'Portfolio Website',
-      imageSrc: portfolioImage,
-      technologies: 'ReactJs-Javascript-Tailwind-FramerMotion',
-      description: 'Portfolio website for review my project.This website build with NextJs,Tailwind,And FramerMotion.',
-    },
-    {
-      title: 'Portfolio Website',
-      imageSrc: portfolioImage,
-      technologies: 'ReactJs-Javascript-Tailwind-FramerMotion',
-      description: 'Portfolio website for review my project.This website build with NextJs,Tailwind,And FramerMotion.',
-    },
-    {
-      title: 'Portfolio Website',
-      imageSrc: portfolioImage,
-      technologies: 'ReactJs-Javascript-Tailwind-FramerMotion',
-      description: 'Portfolio website for review my project.This website build with NextJs,Tailwind,And FramerMotion.',
-    },
-    // Add more projects as needed
   ];
 
   return (
