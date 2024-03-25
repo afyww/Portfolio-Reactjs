@@ -41,14 +41,14 @@ const ProjectCardList = () => {
       imageSrc: portfolioImage,
       technologies: 'ReactJs-Javascript-Tailwind-FramerMotion',
       description: 'Portfolio website for review my project.This website build with NextJs,Tailwind,And FramerMotion.',
-      link: 'https://portfolio-reactjs-sigma.vercel.app/',
+      link: 'https://codefy.my.id/',
     },
     {
       title: 'Cashier Web',
       imageSrc: Cashier,
       technologies: 'ReactJs-Javascript-Laravel-Tailwind',
       description: 'Cashier web apps for coffeshop.This build with ReactJs for frontend,And Laravel rest api for backend.',
-      link: 'https://beilcoff-client.vercel.app/',
+      link: 'https://client.beilcoff.shop/',
     },
   ];
 
