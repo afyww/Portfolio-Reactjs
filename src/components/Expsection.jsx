@@ -40,7 +40,7 @@ const Expsection = () => {
                     transition={{ duration: 0.5, delay: 0.8 }}
                     className='text-5xl font-extrabold'
                 >
-                    3^
+                    10^
                 </motion.h1>
                 <motion.span
                     initial={{ opacity: 0 }}
