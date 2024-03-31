@@ -1,12 +1,14 @@
-import './App.css'
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
     };
     return (
         <section>
@@ -21,10 +23,10 @@ const Navbar = () => {
                             </a>
                         </div>
                         <div className=" hidden items-center md:flex xl:flex text-white">
-                            <a href="#home" className="px-5 text-xl font-light hover:text-black hover:underline">Home</a>
-                            <a href="#about" className="px-5 text-xl font-light hover:text-black hover:underline">About</a>
-                            <a href="#project" className="px-5 text-xl font-light hover:text-black hover:underline">Projects</a>
-                            <a href="#contact" className="px-5 text-xl font-light hover:text-black hover:underline">Contact</a>
+                            <a href="#home" onClick={closeMobileMenu} className="px-5 text-xl font-light hover:text-black hover:underline">Home</a>
+                            <a href="#about" onClick={closeMobileMenu} className="px-5 text-xl font-light hover:text-black hover:underline">About</a>
+                            <a href="#project" onClick={closeMobileMenu} className="px-5 text-xl font-light hover:text-black hover:underline">Projects</a>
+                            <a href="#contact" onClick={closeMobileMenu} className="px-5 text-xl font-light hover:text-black hover:underline">Contact</a>
                         </div>
                         <div className="md:hidden flex items-center">
                             <button className="mobile-menu-button" onClick={toggleMobileMenu}>
@@ -39,10 +41,10 @@ const Navbar = () => {
                 </div>
 
                 <div className={`mobile-menu md:hidden xl:hidden text-white ${isMobileMenuOpen ? '' : 'hidden'}`}>
-                    <a href="#home" className="block py-3 px-5 text-sm hover:bg-black rounded-xl">Home</a>
-                    <a href="#about" className="block py-3 px-5 text-sm hover:bg-black rounded-xl">About</a>
-                    <a href="#project" className="block py-3 px-5 text-sm hover:bg-black rounded-xl">Projects</a>
-                    <a href="#contact" className="block py-3 px-5 text-sm hover:bg-black rounded-xl">Contact</a>
+                    <a href="#home" onClick={closeMobileMenu} className="block py-3 px-5 text-sm hover:bg-black rounded-xl">Home</a>
+                    <a href="#about" onClick={closeMobileMenu} className="block py-3 px-5 text-sm hover:bg-black rounded-xl">About</a>
+                    <a href="#project" onClick={closeMobileMenu} className="block py-3 px-5 text-sm hover:bg-black rounded-xl">Projects</a>
+                    <a href="#contact" onClick={closeMobileMenu} className="block py-3 px-5 text-sm hover:bg-black rounded-xl">Contact</a>
                 </div>
             </nav>
         </section>
