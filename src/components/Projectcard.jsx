@@ -1,7 +1,7 @@
 import './App.css'
 import Learnmorebtn from './Learnmorebtn';
-import dinkesProjectImage from '../assets/images/Dinkes.png';
-import portfolioImage from '../assets/images/Portfolio.png';
+import Dinkes from '../assets/images/Dinkes.png';
+import Portfolio from '../assets/images/Portfolio.png';
 import Cashier from '../assets/images/Cashier.png'
 
 
@@ -31,14 +31,14 @@ const ProjectCardList = () => {
   const projects = [
     {
       title: 'Information System',
-      imageSrc: dinkesProjectImage,
+      imageSrc: Dinkes,
       technologies: 'Laravel-Tailwind-Jquery-Docker-Mysql',
       description: 'Information system website for Dinas Kesehatan Kota Semarang.Build with laravel full stack framework and tailwind for the front end.This web for manage employee and make work letter for the employee.',
       link: 'http://119.2.50.170:5500/surat-p2p/',
     },
     {
       title: 'Portfolio Website',
-      imageSrc: portfolioImage,
+      imageSrc: Portfolio
       technologies: 'ReactJs-Javascript-Tailwind-FramerMotion',
       description: 'Portfolio website for review my project.This website build with NextJs,Tailwind,And FramerMotion.',
       link: 'https://codefy.my.id/',
