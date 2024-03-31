@@ -38,7 +38,7 @@ const ProjectCardList = () => {
     },
     {
       title: 'Portfolio Website',
-      imageSrc: Portfolio
+      imageSrc: Portfolio,
       technologies: 'ReactJs-Javascript-Tailwind-FramerMotion',
       description: 'Portfolio website for review my project.This website build with NextJs,Tailwind,And FramerMotion.',
       link: 'https://codefy.my.id/',
