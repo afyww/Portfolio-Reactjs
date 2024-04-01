@@ -30,7 +30,7 @@ const Herosection = () => {
                             className="text-red-600">Indonesia</span></h1>
                     </div>
                 </div>
-                <div className="order-first mx-auto xl:mx-0 md:mx-0 2xl:mx-0 md:order-first rounded-full shadow-2xl md:col-span-1 xl:col-span-1 xl:order-none my-auto bg-cover bg-center" style={{ width: '100%', height: '75%' }}>
+                <div className="order-first mx-auto xl:mx-0 md:mx-0 2xl:mx-0 md:order-first bg-gradient-to-b from-white to-slate-600 rounded-full shadow-2xl md:col-span-1 xl:col-span-1 xl:order-none my-auto bg-cover bg-center" style={{ width: '100%', height: '75%' }}>
                     <img src={Hero} alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20%' }} />
                 </div>
                 <div className="ml-0 md:ml-32 xl:ml-32 my-auto space-y-4">
