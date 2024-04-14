@@ -1,7 +1,6 @@
 import './App.css'
 import TypewriterComponent from 'typewriter-effect';
 import Contactcard from './Contactcard';
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const Contactsection = () => {
     return (
@@ -24,7 +23,6 @@ const Contactsection = () => {
                 <div className="md:my-auto xl:my-auto">
                     <Contactcard />
                 </div>
-                <SpeedInsights />
             </div>
         </section >
     )
