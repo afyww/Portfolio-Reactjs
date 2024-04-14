@@ -1,8 +1,9 @@
 import './App.css'
 import Learnmorebtn from './Learnmorebtn';
-import Dinkes from '../assets/images/Dinkes.png';
-import Portfolio from '../assets/images/Portfolio.png';
-import Cashier from '../assets/images/Cashier.png'
+import Dinkes from '../assets/images/dinkesporto.png';
+import Portfolio from '../assets/images/portoafy.png';
+import Cashier from '../assets/images/cashierkopi.png'
+import Aquashine from '../assets/images/aquashine.png'
 
 
 // eslint-disable-next-line react/prop-types
@@ -49,6 +50,13 @@ const ProjectCardList = () => {
       technologies: 'ReactJs-Javascript-Laravel-Tailwind',
       description: 'Cashier web apps for coffeshop.This build with ReactJs for frontend,And Laravel rest api for backend.',
       link: 'https://client.beilcoff.shop/',
+    },
+    {
+      title: 'Company Profilr',
+      imageSrc: Aquashine,
+      technologies: 'ReactJs-Javascript',
+      description: 'Company profilr web for business aquascape.This build with ReactJs SPA.',
+      link: 'https://aquashine.company/',
     },
   ];
 

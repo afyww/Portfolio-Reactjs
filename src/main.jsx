@@ -19,7 +19,6 @@ const commonMotionProps = {
   transition: { duration: 1.0, ease: "easeInOut" },
 };
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <main className='flex min-h-screen bg-gradient-to-b from-gray-700 to-gray-900 flex-col'>
