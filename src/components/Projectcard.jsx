@@ -1,9 +1,9 @@
 import './App.css'
 import Learnmorebtn from './Learnmorebtn';
-import Dinkes from '../assets/images/dinkesporto.png';
-import Portfolio from '../assets/images/portoafy.png';
-import Cashier from '../assets/images/cashierkopi.png'
-import Aquashine from '../assets/images/aquashine.png'
+import Dinkes from '../assets/images/Dinkes.png';
+import Portfolio from '../assets/images/Porto.png';
+import Cashier from '../assets/images/Cashier.png'
+import Aquashine from '../assets/images/Aqua.png'
 
 
 // eslint-disable-next-line react/prop-types
