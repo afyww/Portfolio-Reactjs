@@ -52,10 +52,10 @@ const ProjectCardList = () => {
       link: 'https://client.beilcoff.shop/',
     },
     {
-      title: 'Company Profilr',
+      title: 'Company Profile',
       imageSrc: Aquashine,
       technologies: 'ReactJs-Javascript',
-      description: 'Company profilr web for business aquascape.This build with ReactJs SPA.',
+      description: 'Company profile web for business aquascape.This build with ReactJs SPA.',
       link: 'https://aquashine.company/',
     },
   ];
