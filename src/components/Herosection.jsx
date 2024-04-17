@@ -3,6 +3,11 @@ import TypewriterComponent from 'typewriter-effect'
 import Hero from '../assets/images/Hero.png'
 
 const Herosection = () => {
+
+    const downloadPdf = () => {
+        window.open('/cv-afy.pdf', '_blank');
+    };
+
     return (
         <section id="home">
             <div className="grid grid-cols-1 h-screen md:grid-cols-2 xl:grid-cols-3 2xl:grid-col-3">
@@ -65,7 +70,9 @@ const Herosection = () => {
                         </a>
                     </div>
                     <div className="relative xl:inline-block space-y-2">
-                        <button className="font-semibold bg-blue-500 text-black w-full p-3 hover:bg-blue-700">Download
+                        <button 
+                        onClick={downloadPdf}
+                        className="font-semibold bg-blue-500 text-black w-full p-3 hover:bg-blue-700">Download
                             Cv
                         </button>
                         <button className="font-semibold bg-green-500 text-black w-full p-3 hover:bg-green-700">
