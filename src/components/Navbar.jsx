@@ -115,7 +115,7 @@ const Navbar = () => {
                         >
                             <div className="flex flex-col gap-8 items-center justify-center h-full ">
                                 {navLinks.map((link, index) => (
-                                    <motion.span key={index} className="text-white font-light text-2xl cursor-pointer" variants={linkItemVariants} onClick={closeModal}>
+                                    <motion.span key={index} className="text-white text-4xl font-bold" variants={linkItemVariants} onClick={closeModal}>
                                         <a href={link.href}>{link.title}</a>
                                     </motion.span>
                                 ))}
