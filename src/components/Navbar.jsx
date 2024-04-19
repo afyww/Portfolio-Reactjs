@@ -20,7 +20,7 @@ const Navbar = () => {
 
         handleResize(); // Call once to initialize
         window.addEventListener('resize', handleResize);
-        
+
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -127,7 +127,7 @@ const Navbar = () => {
                         exit="exit"
                     >
                         <FaTimes
-                            className="absolute top-5 right-5 text-white cursor-pointer w-6 h-6"
+                            className="absolute top-5 right-4 text-white cursor-pointer w-6 h-6"
                             onClick={toggleModal}
                         />
                         <motion.div
