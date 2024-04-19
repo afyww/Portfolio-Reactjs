@@ -84,7 +84,7 @@ const Navbar = () => {
 <nav className="bg-transparent z-10 fixed top-3 right-14 left-14 shadow-xl p-4">
             <div className="flex justify-between">
                 <div>
-                    <a href="">
+                    <a href="/">
                         <h1 className='text-black text-4xl font-extrabold'>CODE<span className='text-white'>FY</span></h1>
                     </a>
                 </div>
