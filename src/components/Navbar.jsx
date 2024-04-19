@@ -92,7 +92,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-transparent z-10 xl:fixed xl:top-3 xl:right-14 xl:left-14 shadow-xl p-4">
+        <nav className="bg-transparent z-10 xl:fixed xl:top-3 xl:right-14 xl:left-14 shadow-xl p-8 xl:p-4">
             <div className="flex justify-between">
                 <div>
                     <a href="/">
@@ -127,7 +127,7 @@ const Navbar = () => {
                         exit="exit"
                     >
                         <FaTimes
-                            className="absolute top-6 right-4 text-white cursor-pointer w-10 h-8"
+                            className="absolute top-8 right-9 text-white cursor-pointer w-10 h-8"
                             onClick={toggleModal}
                         />
                         <motion.div
@@ -139,7 +139,7 @@ const Navbar = () => {
                         >
                             <div className="flex flex-col gap-8 items-center justify-center h-full ">
                                 {navLinks.map((link, index) => (
-                                    <motion.span key={index} className="text-white text-4xl font-bold" variants={linkItemVariants} onClick={closeModal}>
+                                    <motion.span key={index} className="text-gray-200 text-5xl font-bold" variants={linkItemVariants} onClick={closeModal}>
                                         <a href={link.href}>{link.title}</a>
                                     </motion.span>
                                 ))}
