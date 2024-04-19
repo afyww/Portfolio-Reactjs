@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -11,6 +11,20 @@ const navLinks = [
 
 const Navbar = () => {
     const [showModal, setShowModal] = useState(false);
+    const [isMobileView, setIsMobileView] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobileView(window.innerWidth <= 768); // Adjust this value based on your mobile breakpoint
+        };
+
+        handleResize(); // Call once to initialize
+        window.addEventListener('resize', handleResize);
+        
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const toggleModal = () => {
         setShowModal(!showModal);
@@ -49,7 +63,6 @@ const Navbar = () => {
             transition: {
                 duration: 0.5,
                 ease: "easeOut" // Add ease-out easing function
-
             },
         },
         exit: {
@@ -61,7 +74,6 @@ const Navbar = () => {
             }
         },
     };
-
 
     const navLinksVariants = {
         hidden: {},
@@ -79,21 +91,34 @@ const Navbar = () => {
         },
     };
 
-
     return (
-<nav className="bg-transparent z-10 fixed top-3 right-14 left-14 shadow-xl p-4">
+        <nav className="bg-transparent z-10 fixed top-3 right-14 left-14 shadow-xl p-4">
             <div className="flex justify-between">
                 <div>
                     <a href="/">
                         <h1 className='text-black text-4xl font-extrabold'>CODE<span className='text-white'>FY</span></h1>
                     </a>
                 </div>
-                <button className="text-white">
-                    <FaBars onClick={toggleModal} className="w-10 h-10" />
-                </button>
+                {isMobileView ? (
+                    <button className="text-white">
+                        {showModal ? (
+                            <FaTimes onClick={toggleModal} className="w-10 h-8" />
+                        ) : (
+                            <FaBars onClick={toggleModal} className="w-10 h-8" />
+                        )}
+                    </button>
+                ) : (
+                    <div className="hidden sm:flex gap-8">
+                        {navLinks.map((link, index) => (
+                            <a key={index} href={link.href} className="text-white hover:underline hover:text-black text-2xl font-light">
+                                {link.title}
+                            </a>
+                        ))}
+                    </div>
+                )}
             </div>
             <AnimatePresence>
-                {showModal && (
+                {showModal && isMobileView && (
                     <motion.div
                         className="fixed inset-0 flex justify-center items-center bg-gray-900"
                         variants={modalVariants}
@@ -102,7 +127,7 @@ const Navbar = () => {
                         exit="exit"
                     >
                         <FaTimes
-                            className="absolute top-6 right-4 text-white cursor-pointer w-10 h-10"
+                            className="absolute top-6 right-4 text-white cursor-pointer w-10 h-8"
                             onClick={toggleModal}
                         />
                         <motion.div
@@ -111,7 +136,6 @@ const Navbar = () => {
                             initial="hidden"
                             animate="visible"
                             exit="exit"
-
                         >
                             <div className="flex flex-col gap-8 items-center justify-center h-full ">
                                 {navLinks.map((link, index) => (
@@ -124,7 +148,8 @@ const Navbar = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </nav>    );
+        </nav>
+    );
 }
 
 export default Navbar;
