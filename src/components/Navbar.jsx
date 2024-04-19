@@ -92,19 +92,19 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-transparent z-10 xl:fixed xl:top-0 xl:right-14 xl:left-14 shadow-xl p-8 xl:p-4">
+        <nav className="bg-transparent z-10 fixed top-0 right-0 left-0 xl:right-14 xl:left-14 shadow-xl p-4">
             <div className="flex justify-between xl:mx-4">
                 <div>
                     <a href="/">
-                        <h1 className='text-black text-4xl font-extrabold'>CODE<span className='text-white'>FY</span></h1>
+                        <h1 className='text-black text-2xl xl:text-4xl font-extrabold'>CODE<span className='text-white'>FY</span></h1>
                     </a>
                 </div>
                 {isMobileView ? (
                     <button className="text-white">
                         {showModal ? (
-                            <FaTimes onClick={toggleModal} className="w-10 h-8" />
+                            <FaTimes onClick={toggleModal} className="xl:w-10 xl:h-8 w-6 h-6" />
                         ) : (
-                            <FaBars onClick={toggleModal} className="w-10 h-8" />
+                            <FaBars onClick={toggleModal} className="xl:w-10 xl:h-8 w-6 h-6" />
                         )}
                     </button>
                 ) : (
@@ -127,7 +127,7 @@ const Navbar = () => {
                         exit="exit"
                     >
                         <FaTimes
-                            className="absolute top-8 right-9 text-white cursor-pointer w-10 h-8"
+                            className="absolute top-5 right-5 text-white cursor-pointer w-6 h-6"
                             onClick={toggleModal}
                         />
                         <motion.div
