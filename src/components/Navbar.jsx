@@ -1,55 +1,130 @@
 import { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const navLinks = [
+    { title: 'Home', href: '#home' },
+    { title: 'About', href: '#about' },
+    { title: 'Project', href: '#project' },
+    { title: 'Contact', href: '#contact' }
+];
 
 const Navbar = () => {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
+    const toggleModal = () => {
+        setShowModal(!showModal);
     };
 
-    const closeMobileMenu = () => {
-        setIsMobileMenuOpen(false);
+    const closeModal = () => {
+        setShowModal(false);
     };
+
+    const modalVariants = {
+        hidden: {
+            y: '-100vh',
+        },
+        visible: {
+            y: 0,
+            transition: {
+                type: 'tween', // Set transition type to 'tween'
+                duration: 0.3, // Specify duration
+            },
+        },
+        exit: {
+            y: '-100vh',
+            transition: {
+                type: 'tween',
+                duration: 0.3,
+                delay: 0.3,
+            },
+        },
+    };
+
+    const linkItemVariants = {
+        hidden: { opacity: 0, y: '50%' },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                ease: "easeOut" // Add ease-out easing function
+
+            },
+        },
+        exit: {
+            opacity: 0,
+            y: '50%',
+            transition: {
+                duration: 0.1,
+                ease: "easeOut" // Add ease-out easing function
+            }
+        },
+    };
+
+
+    const navLinksVariants = {
+        hidden: {},
+        visible: {
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.3,
+            },
+        },
+        exit: {
+            transition: {
+                staggerChildren: 0.05,
+                staggerDirection: -1,
+            },
+        },
+    };
+
+
     return (
-        <section>
-            <div className='h-16'></div>
-            <nav className="fixed z-50 top-0 right-20 left-20 mx-auto shadow-xl">
-                <div className="mx-auto px-4">
-                    <div className="flex justify-between">
-                        <div>
-                            <a href="/" className="flex items-center py-4 px-3 text-white">
-                                <span className="font-extrabold text-4xl"><span
-                                    className="text-black">CODE</span>FY.</span>
-                            </a>
-                        </div>
-                        <div className=" hidden items-center md:flex xl:flex text-white">
-                            <a href="#home" onClick={closeMobileMenu} className="px-5 text-xl font-light hover:text-black hover:underline">Home</a>
-                            <a href="#about" onClick={closeMobileMenu} className="px-5 text-xl font-light hover:text-black hover:underline">About</a>
-                            <a href="#project" onClick={closeMobileMenu} className="px-5 text-xl font-light hover:text-black hover:underline">Projects</a>
-                            <a href="#contact" onClick={closeMobileMenu} className="px-5 text-xl font-light hover:text-black hover:underline">Contact</a>
-                        </div>
-                        <div className="md:hidden flex items-center">
-                            <button className="mobile-menu-button" onClick={toggleMobileMenu}>
-                                <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="100px"
-                                    height="100px">
-                                    <path
-                                        d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+<nav className="bg-transparent z-10 fixed top-3 right-14 left-14 shadow-xl p-4">
+            <div className="flex justify-between">
+                <div>
+                    <a href="">
+                        <h1 className='text-black text-4xl font-extrabold'>CODE<span className='text-white'>FY</span></h1>
+                    </a>
                 </div>
+                <button className="text-white">
+                    <FaBars onClick={toggleModal} className="w-10 h-10" />
+                </button>
+            </div>
+            <AnimatePresence>
+                {showModal && (
+                    <motion.div
+                        className="fixed inset-0 flex justify-center items-center bg-gray-900"
+                        variants={modalVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                    >
+                        <FaTimes
+                            className="absolute top-6 right-4 text-white cursor-pointer w-10 h-10"
+                            onClick={toggleModal}
+                        />
+                        <motion.div
+                            className="relative bg-gray-900 w-full"
+                            variants={navLinksVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
 
-                <div className={`mobile-menu md:hidden xl:hidden text-white ${isMobileMenuOpen ? '' : 'hidden'}`}>
-                    <a href="#home" onClick={closeMobileMenu} className="block py-3 px-5 text-sm hover:bg-black rounded-xl">Home</a>
-                    <a href="#about" onClick={closeMobileMenu} className="block py-3 px-5 text-sm hover:bg-black rounded-xl">About</a>
-                    <a href="#project" onClick={closeMobileMenu} className="block py-3 px-5 text-sm hover:bg-black rounded-xl">Projects</a>
-                    <a href="#contact" onClick={closeMobileMenu} className="block py-3 px-5 text-sm hover:bg-black rounded-xl">Contact</a>
-                </div>
-            </nav>
-        </section>
-
-    )
+                        >
+                            <div className="flex flex-col gap-8 items-center justify-center h-full ">
+                                {navLinks.map((link, index) => (
+                                    <motion.span key={index} className="text-white font-light text-2xl cursor-pointer" variants={linkItemVariants} onClick={closeModal}>
+                                        <a href={link.href}>{link.title}</a>
+                                    </motion.span>
+                                ))}
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </nav>    );
 }
 
-export default Navbar
+export default Navbar;
