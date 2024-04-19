@@ -92,8 +92,8 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-transparent z-10 xl:fixed xl:top-3 xl:right-14 xl:left-14 shadow-xl p-8 xl:p-4">
-            <div className="flex justify-between">
+        <nav className="bg-transparent z-10 xl:fixed xl:top-0 xl:right-14 xl:left-14 shadow-xl p-8 xl:p-4">
+            <div className="flex justify-between xl:mx-4">
                 <div>
                     <a href="/">
                         <h1 className='text-black text-4xl font-extrabold'>CODE<span className='text-white'>FY</span></h1>
@@ -108,7 +108,7 @@ const Navbar = () => {
                         )}
                     </button>
                 ) : (
-                    <div className="hidden sm:flex gap-8">
+                    <div className="hidden sm:flex gap-10 my-auto">
                         {navLinks.map((link, index) => (
                             <a key={index} href={link.href} className="text-white hover:underline hover:text-black text-2xl font-light">
                                 {link.title}
