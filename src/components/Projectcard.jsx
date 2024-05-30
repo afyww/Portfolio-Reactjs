@@ -22,7 +22,7 @@ const ProjectCard = ({ title, imageSrc, technologies, description, link }) => {
       <p className="text-left font-light line-clamp-2 max-w-xs">{description}</p>
       <div className='flex justify-between'>
       <Learnmorebtn title={title} technologies={technologies} description={description} />
-      <a className='bg-red-500 hover:bg-red-700 text-black font-light py-2 px-4 rounded-sm' href={link}>Visit</a>
+      <a className='bg-red-500 hover:bg-red-700 text-black font-light py-2 px-4 rounded-sm' href={link} target="_blank" rel="noopener noreferrer">Visit</a>
       </div>
     </div>
   );
