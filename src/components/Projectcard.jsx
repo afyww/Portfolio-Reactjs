@@ -50,7 +50,7 @@ const ProjectCardList = () => {
       imageSrc: Luthfiyasin,
       technologies: 'ReactJs-Javascript-Tailwind',
       description: 'Profile Company for Calon Gubernur Jawa Tengah.This website build with ReactJs,Tailwind.',
-      link: 'https://custompedia.agency/',
+      link: 'https://www.luthfiyasinofficial.id/',
     },
     {
       title: 'Beil Cashier App',
