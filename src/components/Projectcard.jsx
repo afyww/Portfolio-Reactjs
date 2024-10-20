@@ -1,9 +1,10 @@
 import './App.css'
 import Learnmorebtn from './Learnmorebtn';
 import Dinkes from '../assets/images/Dinkes.png';
-import Portfolio from '../assets/images/Porto.png';
+import Custompedia from '../assets/images/Custompedia.png'
 import Cashier from '../assets/images/Cashier.png'
 import Aquashine from '../assets/images/Aqua.png'
+import Luthfiyasin from '../assets/images/Luthfiyasin.png'
 
 
 // eslint-disable-next-line react/prop-types
@@ -31,31 +32,38 @@ const ProjectCard = ({ title, imageSrc, technologies, description, link }) => {
 const ProjectCardList = () => {
   const projects = [
     {
-      title: 'Information System',
+      title: 'Sistem Informasi Surat Kerja',
       imageSrc: Dinkes,
       technologies: 'Laravel-Tailwind-Jquery-Docker-Mysql',
       description: 'Information system website for Dinas Kesehatan Kota Semarang.Build with laravel full stack framework and tailwind for the front end.This web for manage employee and make work letter for the employee.',
       link: 'http://119.2.50.170:5500/surat-p2p/',
     },
     {
-      title: 'Portfolio Website',
-      imageSrc: Portfolio,
-      technologies: 'ReactJs-Javascript-Tailwind-FramerMotion',
-      description: 'Portfolio website for review my project.This website build with NextJs,Tailwind,And FramerMotion.',
-      link: 'https://codefy.my.id/',
+      title: 'PT.Custompedia Agency Creative With CMS',
+      imageSrc: Custompedia,
+      technologies: 'ReactJs-Javascript-Tailwind-Laravel',
+      description: 'Profile Company website for update project.This website build with ReactJs,Tailwind,And For CMS use Laravel.',
+      link: 'https://custompedia.agency/',
     },
     {
-      title: 'Cashier Web',
+      title: 'Profile Cagub Jawa Tengah',
+      imageSrc: Luthfiyasin,
+      technologies: 'ReactJs-Javascript-Tailwind',
+      description: 'Profile Company for Calon Gubernur Jawa Tengah.This website build with ReactJs,Tailwind.',
+      link: 'https://custompedia.agency/',
+    },
+    {
+      title: 'Beil Cashier App',
       imageSrc: Cashier,
-      technologies: 'ReactJs-Javascript-Laravel-Tailwind',
-      description: 'Cashier web apps for coffeshop.This build with ReactJs for frontend,And Laravel rest api for backend.',
+      technologies: 'ReactJs-React Native-Laravel-Tailwind-Redis',
+      description: 'Cashier web apps and mobile.This build with ReactJs for frontend,And Laravel rest api for backend and use Laravel Octane with Swoole for boost app and use redis for cache, mobile use React Native.',
       link: 'https://beilcoff.shop/',
     },
     {
       title: 'Company Profile',
       imageSrc: Aquashine,
       technologies: 'ReactJs-Javascript',
-      description: 'Company profile web for business aquascape.This build with ReactJs SPA.',
+      description: 'Company profile web for business aquascape.This build with ReactJs.',
       link: 'https://aquashine.company/',
     },
   ];

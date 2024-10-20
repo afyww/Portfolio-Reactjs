@@ -22,8 +22,8 @@ const Herosection = () => {
                                 options={{
                                     strings: [
                                         "A Laravel Developer",
-                                        "A Web Developer",
                                         "A React Developer",
+                                        "A Full Stack Web Developer",
                                     ],
                                     autoStart: true,
                                     loop: true,
