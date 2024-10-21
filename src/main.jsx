@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <main className='flex min-h-screen bg-gradient-to-b from-gray-700 to-gray-900 flex-col'>
       <Navbar />
-      <div className='max-w-full sm:max-w-full md:max-w-2xl xl:max-w-7xl 2xl:w-full mx-auto p-3 space-y-5'>
+      <div className='max-w-full sm:max-w-full md:max-w-6xl xl:max-w-7xl mx-auto p-3 space-y-5'>
         <motion.div {...commonMotionProps}>
           <Herosection />
         </motion.div>

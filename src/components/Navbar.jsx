@@ -92,7 +92,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-transparent z-10 fixed top-0 right-0 left-0 xl:right-14 xl:left-14 shadow-xl p-4">
+        <nav className="bg-transparent z-10 fixed top-0 right-0 left-0 md:left-16 md:right-16 xl:right-20 xl:left-20 shadow-xl p-4 md:p-6">
             <div className="flex justify-between xl:mx-4">
                 <div>
                     <a href="/">
